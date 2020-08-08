@@ -19,10 +19,6 @@ database.once("open", () => {
 
 server.use(express.json());
 
-server.get("/", (req, res) => {
-  res.send("High Score REST api running now. ");
-});
-
 server.use("/gameSessions", gameSessionsRouter);
 
 server.listen(process.env.PORT, () => {
