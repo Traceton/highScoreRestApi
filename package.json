@@ -1,0 +1,20 @@
+{
+  "name": "highscorerestapi",
+  "version": "1.0.0",
+  "description": "Rest api designed to communicate game scores for my javascript games.",
+  "main": "server.js",
+  "scripts": {
+    "productionServer": "node server.js",
+    "devServer": "nodemon server.js"
+  },
+  "author": "Traceton Timmerman",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.28"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

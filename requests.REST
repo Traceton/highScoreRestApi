@@ -1,0 +1,78 @@
+# get all sessions
+GET http://localhost:5003/gameSessions 
+
+
+
+
+
+
+
+###
+
+
+
+
+
+
+
+DELETE  http://localhost:5003/gameSessions/5f2f0df9dae5936fc3cee5ab
+
+
+
+
+
+
+###
+
+
+
+
+
+
+
+# get session by id
+GET http://localhost:5003/gameSessions/5f2f0df9dae5936fc3cee5ab
+
+
+
+
+
+
+
+
+
+###
+
+
+
+
+
+
+
+
+
+# create new session
+POST http://localhost:5003/gameSessions
+Content-Type: application/json
+
+{
+    "username": "tjcharm",
+    "game": "speedBall",
+    "score": 200
+}
+
+
+
+
+
+
+
+
+###
+
+
+
+
+
+
+
