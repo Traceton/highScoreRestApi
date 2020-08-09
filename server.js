@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
+const server = express();
 const database = mongoose.connection;
 const gameSessionsRouter = require("./routes/gameSessions.js");
 mongoose.connect(process.env.DATABASE_URL, {
@@ -17,11 +17,21 @@ database.once("open", () => {
   console.log("Connected to database");
 });
 
-app.use(express.json());
+server.use((req, res, next) => {
+  res.append("Access-Control-Allow-Origin", "*");
+  res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+  res.append(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
+server.use(express.json());
 
 // testing purpose text
-app.use("/gameSessions", gameSessionsRouter);
+server.use("/gameSessions", gameSessionsRouter);
 
-app.listen(process.env.PORT, () => {
+server.listen(process.env.PORT, () => {
   console.log(`server started at localhost:${process.env.PORT}`);
 });

@@ -76,3 +76,22 @@ Content-Type: application/json
 
 
 
+POST https://gamescoreserver.herokuapp.com/gameSessions
+Content-Type: application/json
+
+{
+    "username": "tjcharm",
+    "game": "speedBall",
+    "score": 200
+}
+
+
+
+
+###
+
+
+
+
+
+GET https://gamescoreserver.herokuapp.com/gameSessions 
