@@ -17,6 +17,12 @@ let findGameSession = async (req, res, next) => {
   next();
 };
 
+app.use("/about", (req, res) => {
+  res.send(`<h1><a>tjcharm.github.io</a></h1>
+      <h2>A node.js REST Api hosted on heroku, created by Traceton Timmerman for my js games.</h2>
+      <h2>use -> <a>https://gamescoreserver.herokuapp.com/gameSessions</a></h2>`);
+});
+
 // get all game sessions.
 router.get("/", async (req, res) => {
   try {
