@@ -17,7 +17,7 @@ let findGameSession = async (req, res, next) => {
   next();
 };
 
-// get info
+// get info about the REST Api
 router.use("/about", (req, res) => {
   res.send(`<h1><a>tjcharm.github.io</a></h1>
         <h2>A node.js REST Api hosted on heroku, created by Traceton Timmerman for my js games.</h2>
