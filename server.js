@@ -19,6 +19,7 @@ database.once("open", () => {
 
 app.use(express.json());
 
+// testing purpose text
 app.use("/gameSessions", gameSessionsRouter);
 
 app.listen(process.env.PORT, () => {
