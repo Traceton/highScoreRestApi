@@ -5,7 +5,7 @@ const app = express();
 const database = mongoose.connection;
 const gameSessionsRouter = require("./routes/gameSessions.js");
 mongoose.connect(process.env.DATABASE_URL, {
-  useNewUrlParappser: true,
+  useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
