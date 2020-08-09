@@ -19,11 +19,6 @@ database.once("open", () => {
 
 app.use(express.json());
 
-app.use("/", (req, res) => {
-  res.send(`<h1>tjcharm.github.io</h1>
-        <h2>A node.js REST Api hosted on heroku, created by Traceton Timmerman for my js games.</h2>`);
-});
-
 app.use("/gameSessions", gameSessionsRouter);
 
 app.listen(process.env.PORT, () => {
