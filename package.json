@@ -4,8 +4,8 @@
   "description": "Rest api designed to communicate game scores for my javascript games.",
   "main": "server.js",
   "scripts": {
-    "productionServer": "node server.js",
-    "devServer": "nodemon server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "Traceton Timmerman",
   "license": "ISC",
