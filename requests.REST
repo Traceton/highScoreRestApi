@@ -52,13 +52,16 @@ GET http://localhost:5003/gameSessions/5f2f0df9dae5936fc3cee5ab
 
 
 # create new session
-POST http://localhost:5003/gameSessions
+POST https://resting-node.herokuapp.com/gameSessions
 Content-Type: application/json
 
 {
-    "username": "tjcharm",
-    "game": "speedBall",
-    "score": 200
+    "username": "Segovia",
+    "numScore": 14,
+    "stringScore": "numScore",
+    "datePlayed": "2020-08-10T22:26:03.292Z",
+    "game": "speedBall"
+    
 }
 
 
